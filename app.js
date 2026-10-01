@@ -18,32 +18,32 @@ title:'골드코스트 당일 여행 가이드',eyebrow:'당일치기 · 수영 
 alert:'10월 4일 Gold Coast/Beenleigh선 공사로 Varsity Lakes ↔ Boggo Road 구간은 railbus 대체 운행입니다. 기본 동선은 Central → Boggo Road → R772 → Helensvale → L1 입니다.',alertLink:'공사 안내',
 preview:'여행 미리보기',today:'지금 해야 할 일',ended:'여행 종료',ready:'준비',done:'완료',minutes:'분',next:'다음 목적지',gpsHint:'GPS를 켜면 현재 위치와 다음 목적지까지 거리가 계속 갱신됩니다.',gpsOn:'내 위치 켜기',google:'Google 길찾기',translink:'Translink',focusNext:'다음 목적지',
 mapTitle:'실제 지도',mapTiny:'OpenStreetMap · 실시간 GPS',wholeRoute:'전체 동선',gpsOff:'GPS 꺼짐',gpsSecure:'HTTPS에서 위치 권한을 허용하세요.',track:'위치 추적',followOn:'따라가기 ON',followOff:'따라가기 OFF',transport:'교통',tourism:'관광',myLoc:'내 위치',whereLabel:'현재 위치',speed:'이동 속도',near:'인근',from:'에서',arrival:'도착권역',toNext:'다음 목적지까지',
-schedule:'현실화한 일정표',schedTiny:'파랑=교통 · 주황=관광',places:'장소별 무엇을 할지',placesTiny:'주황 카드 = 관광',transportDetail:'승·하차 상세',transportTiny:'파랑 카드 = 교통',takeAt:'타는 곳',takeWhat:'타는 것',getOff:'내리는 곳',dayLinks:'당일 체크 링크',dayTiny:'출발 직전 다시 확인',map:'지도',scheduleNav:'일정',placesNav:'관광',transportNav:'교통',nowNav:'지금',
+schedule:'현실화한 일정표',schedTiny:'파랑=교통 · 주황=관광',placesLabel:'장소별 무엇을 할지',placesTiny:'주황 카드 = 관광',recommend:'추천',cost:'예상 비용',priceCheck:'가격/메뉴 확인',fareText:'Translink는 1회 journey당 A$0.50 정액입니다. 같은 카드/기기로 tap on·off하고 1시간 이내 환승하면 여러 교통수단도 한 journey로 묶일 수 있습니다.',fareLink:'50¢ 운임 안내',transportDetail:'승·하차 상세',transportTiny:'파랑 카드 = 교통',takeAt:'타는 곳',takeWhat:'타는 것',getOff:'내리는 곳',dayLinks:'당일 체크 링크',dayTiny:'출발 직전 다시 확인',map:'지도',scheduleNav:'일정',placesNav:'관광',transportNav:'교통',nowNav:'지금',
 footer:'지도 경로선은 여행 순서를 보여주는 안내선입니다. 실제 출발시각·플랫폼·운행변경은 Translink와 현장 안내가 우선입니다. GPS는 페이지가 화면에 열려 있을 때 가장 안정적으로 갱신됩니다.',dirs:['북','북동','동','남동','남','남서','서','북서'],gpsChecking:'현재 위치 확인 중…',gpsUnavailable:'GPS 사용 불가',gpsUnsupported:'이 브라우저는 위치 기능을 지원하지 않습니다.',gpsHttps:'GPS는 HTTPS에서만 안정적으로 동작합니다.',
 schedules:[
 ['06:45','07:05','Central → Boggo Road','TRAIN','train','Central에서 Boggo Road까지 남행 열차. 전광판에서 Boggo Road 정차를 확인.','boggo','transport'],
 ['07:05','07:30','R772 승차 준비','TRANSFER','railbus','Boggo Road busway에서 R772 표지 확인. 공사일 대기시간 포함.','boggo','transport'],
 ['07:30','08:58','R772 → Helensvale','R772','railbus','Rail Replacement Bus. 공사일에는 약 85분 수준을 예상.','helensvale','transport'],
 ['09:00','10:05','L1 → Burleigh Heads','L1','tram','Helensvale에서 Burleigh Heads 방향 G:link L1 직통.','burleigh','transport'],
-['10:05','11:20','Burleigh Beach 수영','SWIM','fun','빨강·노랑 깃발 사이에서 수영. 샤워·환복 포함.','burleigh','tour'],
+['10:05','11:20','Burleigh Beach 수영','SWIM','fun','빨강·노랑 깃발 사이에서 45~60분 수영. 해변 이용은 무료(A$0). 파도 세면 Headland 산책으로 전환.','burleigh','tour'],
 ['11:25','12:10','L1 → Southport','L1','tram','Burleigh에서 Helensvale 방향 L1, Southport 하차.','southport','transport'],
 ['12:10','12:35','704 → Labrador','704','bus','Southport에서 704 Helensvale 방향. Charis 인근에서 하차.','charis','transport'],
-['12:35','13:20','Charis Seafoods 점심','LUNCH','fun','피시앤칩스 중심으로 빠르게 점심. 13:20 전후 수변으로 이동.','charis','tour'],
-['13:30','13:45','Pelican Feeding','PELICAN','fun','Charis 앞 Broadwater 수변. 현장 시작 시각은 당일 확인.','charis','tour'],
+['12:35','13:20','Charis Seafoods 점심','LUNCH','fun','추천: Fish & Calamari A$18.90 또는 Dory & Chips A$15.50. 13:20 전후 식사 마무리.','charis','tour'],
+['13:30','13:45','Pelican Feeding','PELICAN','fun','Charis 앞 Broadwater 수변. 별도 입장권 없이 관람하는 형태. 13:30 전후 시작 여부는 당일 확인.','charis','tour'],
 ['13:50','14:35','704 + L1 → Surfers','704+L1','bus','704 Sea World 방향 → Southport → L1 Burleigh Heads 방향.','surfers','transport'],
-['14:35','16:15','Surfers Paradise 자유시간','WALK','fun','해변 산책, Cavill Avenue, 카페·쇼핑 위주.','surfers','tour'],
-['16:20','18:00','SkyPoint','VIEW','fun','낮 풍경부터 일몰 전후까지.','skypoint','tour'],
+['14:35','16:15','Surfers Paradise 자유시간','WALK','fun','해변 + Cavill Avenue를 60~90분 정도. 관광은 무료, 커피·젤라토 등 간식 A$8~15 정도만 잡으면 충분.','surfers','tour'],
+['16:20','18:00','SkyPoint','VIEW','fun','Fixed Date 티켓 A$33부터. 16:20 전후 올라가 낮 풍경 → 일몰 → 초저녁까지 보고 18:00 이동.','skypoint','tour'],
 ['18:05','18:55','L1 → Burleigh + 도보','L1','tram','Surfers에서 Burleigh Heads 방향 L1 → Rick Shores 도보.','rick','transport'],
-['19:00','20:15','Rick Shores 저녁','DINNER','fun','해변 전망 저녁. 귀가 railbus 때문에 20:15 전후 마무리 권장.','rick','tour'],
+['19:00','20:15','Rick Shores 저녁','DINNER','fun','추천: Bug Roll A$26 + Kingfish A$30. 2인 공유식이면 약 A$60~80/인 예상(음료 제외). 20:15 전후 마무리.','rick','tour'],
 ['20:20','21:30','L1 → Helensvale','L1','tram','Burleigh Heads에서 Helensvale 방향.','helensvale','transport'],
 ['21:30','23:10','R772 + 환승 대기','R772','railbus','Helensvale에서 Boggo Road 방향. 야간 운행은 당일 재확인.','boggo','transport'],
 ['23:10','23:45','Boggo Road → Central','TRAIN','train','연결 열차에 따라 Central 도착은 약 23:15~23:45 예상.','central','transport']],
 places:[
-['burleigh','Burleigh Heads','골드코스트다운 바다 수영과 헤드랜드 풍경을 한 번에 보기 좋은 곳. 곶 쪽은 비교적 차분해 보일 수 있지만 당일 파도와 이안류를 반드시 확인.',['빨강·노랑 깃발 사이 수영','해변 샤워·환복','Headland 짧은 산책','해변 사진']],
-['charis','Charis Seafoods + Broadwater','Labrador 수변에서 피시앤칩스를 먹고 펠리컨 피딩을 보기 좋은 정류점. Broadwater 쪽이라 오픈비치보다 분위기가 잔잔함.',['12:35 점심','피시앤칩스','13:30 전후 Pelican Feeding','수변 산책']],
-['surfers','Surfers Paradise','골드코스트 대표 관광 중심지. 해변, Cavill Avenue, 상점과 카페를 묶어서 짧게 보는 구간.',['해변 산책','Cavill Avenue','카페/쇼핑','Q1 외관 사진']],
-['skypoint','SkyPoint','Q1 상층 전망대에서 해안선과 내륙을 한 번에 보는 구간. 낮 풍경부터 일몰, 초저녁까지 이어서 보기 좋음.',['16:20 입장 목표','해안선 전망','일몰 관람','18:00 전후 이동']],
-['rick','Rick Shores','Burleigh 해변 바로 앞에서 마무리하는 저녁. 식사 뒤 곧바로 긴 귀가 동선으로 연결.',['19:00 예약 권장','해변 전망','20:15 전후 마무리','귀가 R772 재확인']]],
+['burleigh','Burleigh Heads','오전 첫 관광지. 골드코스트다운 오픈비치와 Burleigh Headland 풍경을 함께 보는 구간입니다. 수영은 반드시 라이프가드의 빨강·노랑 깃발 사이에서 하고, 파도가 세면 입수 대신 해변·헤드랜드 산책으로 바꾸는 편이 좋습니다.',['빨강·노랑 깃발 사이 수영','샤워·환복','Headland 짧은 산책','파도 세면 산책으로 전환'],'A$0 · 해변/산책 무료','수영 45~60분 + 환복 15분 정도. 물에 오래 있기보다 다음 이동 시간을 확보하는 구성이 좋음.','https://www.goldcoast.qld.gov.au/Things-to-do/Beaches'],
+['charis','Charis Seafoods + Broadwater','점심과 펠리컨 관람을 한 번에 묶는 구간입니다. Broadwater 수변이라 Surfers나 Burleigh 같은 오픈비치보다 훨씬 잔잔한 분위기입니다.',['12:35 점심 시작','13:20 전후 식사 마무리','13:30 전후 Pelican Feeding','식후 수변 산책'],'약 A$15~30/인 · Dory & Chips A$15.50, Fish & Calamari A$18.90, Prawns & Chips A$25.90 수준','혼자라면 Fish & Calamari가 무난. 많이 먹으면 Fisherman’s Basket 계열. 펠리컨 관람 자체는 별도 입장권 없이 수변에서 보는 방식.','https://charis-seafoods.menueat.net/menu'],
+['surfers','Surfers Paradise','대표 관광지이지만 이 일정에서는 오래 머무는 곳보다 SkyPoint 전 워밍업 구간입니다. Cavill Avenue와 해변을 연결해 걸으면 동선이 깔끔합니다.',['Cavill Avenue 산책','Surfers Paradise Beach','카페·젤라토 한 번','Q1 방향으로 천천히 이동'],'관광 A$0 · 간식 예산 약 A$8~15','수영은 Burleigh에서 했으므로 여기서는 산책·사진·간식 위주가 효율적. 쇼핑을 길게 하면 SkyPoint 일몰 시간이 밀릴 수 있음.',''],
+['skypoint','SkyPoint','Q1의 Observation Deck에서 골드코스트 해안선과 내륙을 360도로 보는 핵심 유료 관광입니다. 일정이 고정돼 있으므로 Flexi보다 Fixed Date 티켓이 합리적입니다.',['16:20 전후 입장','낮 풍경 촬영','일몰까지 대기','18:00 전후 Rick Shores로 출발'],'Fixed Date A$33부터 · Flexi A$51부터','이번 일정은 날짜와 시간이 정해져 있으므로 Fixed Date 티켓 추천. 창가 쪽에서 남쪽 Burleigh 방향과 북쪽 Main Beach 방향을 둘 다 보는 게 좋음.','https://www.skypoint.com.au/tickets'],
+['rick','Rick Shores','Burleigh 해변 바로 앞에서 마무리하는 동남아·Pan-Asian 계열 저녁입니다. 대표 메뉴를 몇 개 나눠 먹는 방식이 잘 맞고, 이후 Brisbane 귀가가 길어서 20:15 전후에는 마무리하는 편이 안전합니다.',['19:00 예약 권장','Rick’s Bug Roll','Kingfish sashimi','식사 중 귀가 R772 재확인'],'가볍게 약 A$60~80/인 · Bug Roll A$26, Kingfish A$30 · Set menu A$95/A$150pp','2인이라면 Bug Roll A$26 + Kingfish A$30 + Prawn Curry A$56 + Rice A$9 = 약 A$121, 즉 음료 전 1인 약 A$60.5. 메뉴는 계절에 따라 변동.','https://www.rickshores.com.au/menu']],
 legs:[
 ['Central → Boggo Road','15~20분','TRAIN','train','Brisbane Central Station','남행 열차 · Boggo Road 하차','Boggo Road station','10월 4일 Gold Coast선 직통열차 대신 Boggo Road에서 railbus 환승.','central','boggo'],
 ['Boggo Road → Helensvale','약 85분 + 대기','R772','railbus','Boggo Road busway station','R772 Rail Replacement Bus · Helensvale 방향','Helensvale station','가장 중요한 환승. 임시 승차 위치는 현장 R772 표지와 직원 안내 우선.','boggo','helensvale'],
@@ -58,32 +58,32 @@ en:{
 title:'Gold Coast Day Trip Guide',eyebrow:'Day trip · Swim + Lunch + Views + Dinner',intro:'OpenStreetMap, live GPS, boarding details and sightseeing notes in one mobile guide.',s1:'Leave Central',s2:'Reach Burleigh',s3:'Rick Shores',
 alert:'On 4 Oct, rail replacement buses operate between Varsity Lakes and Boggo Road. Planned route: Central → Boggo Road → R772 → Helensvale → L1.',alertLink:'Service update',preview:'Trip preview',today:'What to do now',ended:'Trip finished',ready:'Ready',done:'Done',minutes:' min',next:'Next destination',gpsHint:'Turn on GPS to continuously update your location and distance to the next stop.',gpsOn:'Turn on GPS',google:'Google Maps',translink:'Translink',focusNext:'Next stop',
 mapTitle:'Live map',mapTiny:'OpenStreetMap · Live GPS',wholeRoute:'Full route',gpsOff:'GPS off',gpsSecure:'Allow location access on HTTPS.',track:'Track',followOn:'Follow ON',followOff:'Follow OFF',transport:'Transport',tourism:'Sightseeing',myLoc:'My location',whereLabel:'Current location',speed:'Speed',near:'near',from:'from',arrival:'Arrival zone',toNext:'To next stop',
-schedule:'Realistic itinerary',schedTiny:'Blue = transport · Orange = sightseeing',places:'What to do at each place',placesTiny:'Orange cards = sightseeing',transportDetail:'Boarding & transfer details',transportTiny:'Blue cards = transport',takeAt:'Board at',takeWhat:'Take',getOff:'Get off at',dayLinks:'Day-of links',dayTiny:'Check again before departure',map:'Map',scheduleNav:'Schedule',placesNav:'Places',transportNav:'Transit',nowNav:'Now',
+schedule:'Realistic itinerary',schedTiny:'Blue = transport · Orange = sightseeing',placesLabel:'What to do at each place',placesTiny:'Orange cards = sightseeing',recommend:'Recommended',cost:'Approx. cost',priceCheck:'Check menu / price',fareText:'Translink is A$0.50 per journey. Use the same card/device to tap on and off; eligible transfers within 1 hour can be combined into one journey.',fareLink:'50¢ fare info',transportDetail:'Boarding & transfer details',transportTiny:'Blue cards = transport',takeAt:'Board at',takeWhat:'Take',getOff:'Get off at',dayLinks:'Day-of links',dayTiny:'Check again before departure',map:'Map',scheduleNav:'Schedule',placesNav:'Places',transportNav:'Transit',nowNav:'Now',
 footer:'Route lines show the trip sequence, not turn-by-turn navigation. Actual departure times, platforms and disruptions from Translink and on-site signs take priority. GPS updates most reliably while this page stays open.',dirs:['N','NE','E','SE','S','SW','W','NW'],gpsChecking:'Finding your location…',gpsUnavailable:'GPS unavailable',gpsUnsupported:'This browser does not support geolocation.',gpsHttps:'GPS works reliably only on HTTPS.',
 schedules:[
 ['06:45','07:05','Central → Boggo Road','TRAIN','train','Take a southbound train and confirm it stops at Boggo Road.','boggo','transport'],
 ['07:05','07:30','Prepare for R772','TRANSFER','railbus','Follow R772 railbus signs at Boggo Road busway. Buffer included.','boggo','transport'],
 ['07:30','08:58','R772 → Helensvale','R772','railbus','Rail replacement bus. Allow about 85 minutes on the works day.','helensvale','transport'],
 ['09:00','10:05','L1 → Burleigh Heads','L1','tram','Direct G:link L1 from Helensvale toward Burleigh Heads.','burleigh','transport'],
-['10:05','11:20','Swim at Burleigh Beach','SWIM','fun','Swim between the red-and-yellow flags. Shower and change included.','burleigh','tour'],
+['10:05','11:20','Swim at Burleigh Beach','SWIM','fun','Swim 45–60 min between the red-and-yellow flags. Beach use is free; switch to a headland walk if surf is rough.','burleigh','tour'],
 ['11:25','12:10','L1 → Southport','L1','tram','L1 toward Helensvale, get off at Southport.','southport','transport'],
 ['12:10','12:35','704 → Labrador','704','bus','Bus 704 toward Helensvale, get off near Charis.','charis','transport'],
-['12:35','13:20','Lunch at Charis Seafoods','LUNCH','fun','Quick fish-and-chips lunch, then move to the waterfront.','charis','tour'],
-['13:30','13:45','Pelican Feeding','PELICAN','fun','Broadwater waterfront by Charis. Confirm start time on the day.','charis','tour'],
+['12:35','13:20','Lunch at Charis Seafoods','LUNCH','fun','Pick: Fish & Calamari A$18.90 or Dory & Chips A$15.50. Finish lunch by about 13:20.','charis','tour'],
+['13:30','13:45','Pelican Feeding','PELICAN','fun','Broadwater waterfront by Charis; no separate attraction ticket. Confirm the ~13:30 start on the day.','charis','tour'],
 ['13:50','14:35','704 + L1 → Surfers','704+L1','bus','704 toward Sea World → Southport → L1 southbound.','surfers','transport'],
-['14:35','16:15','Surfers Paradise free time','WALK','fun','Beach walk, Cavill Avenue, cafés and shopping.','surfers','tour'],
-['16:20','18:00','SkyPoint','VIEW','fun','Stay from daylight through sunset into early evening.','skypoint','tour'],
+['14:35','16:15','Surfers Paradise free time','WALK','fun','Spend 60–90 min on the beach + Cavill Avenue. Sightseeing is free; allow roughly A$8–15 for a snack.','surfers','tour'],
+['16:20','18:00','SkyPoint','VIEW','fun','Fixed Date entry starts from A$33. Go up around 16:20 for daylight → sunset → early evening, then leave around 18:00.','skypoint','tour'],
 ['18:05','18:55','L1 → Burleigh + walk','L1','tram','L1 toward Burleigh Heads, then walk to Rick Shores.','rick','transport'],
-['19:00','20:15','Dinner at Rick Shores','DINNER','fun','Beachfront dinner. Finish around 20:15 for the railbus trip home.','rick','tour'],
+['19:00','20:15','Dinner at Rick Shores','DINNER','fun','Try the A$26 Bug Roll + A$30 Kingfish. Shared dinner roughly A$60–80 pp before drinks; finish around 20:15.','rick','tour'],
 ['20:20','21:30','L1 → Helensvale','L1','tram','L1 toward Helensvale.','helensvale','transport'],
 ['21:30','23:10','R772 + transfer buffer','R772','railbus','Railbus toward Boggo Road. Re-check the evening service.','boggo','transport'],
 ['23:10','23:45','Boggo Road → Central','TRAIN','train','Depending on the connection, reach Central around 23:15–23:45.','central','transport']],
 places:[
-['burleigh','Burleigh Heads','A good Gold Coast mix of ocean swimming and headland scenery. Conditions can still be surfy, so check flags and rips on arrival.',['Swim between flags','Shower/change','Short headland walk','Beach photos']],
-['charis','Charis Seafoods + Broadwater','A relaxed Broadwater stop for fish and chips and the pelican feeding. The waterfront here feels calmer than the open surf beaches.',['Lunch 12:35','Fish & chips','Pelicans around 13:30','Waterfront walk']],
-['surfers','Surfers Paradise','The main tourist hub. Use this block for the beach, Cavill Avenue, cafés and a little shopping.',['Beach walk','Cavill Avenue','Café/shopping','Q1 photos']],
-['skypoint','SkyPoint','Q1 observation deck with broad coastal and inland views. Timing is designed for daylight, sunset and early evening.',['Aim for 16:20','Coast panorama','Sunset','Leave around 18:00']],
-['rick','Rick Shores','Beachfront dinner at Burleigh to close the day, then transition into the long trip back to Brisbane.',['19:00 booking','Beachfront view','Finish ~20:15','Re-check R772']]],
+['burleigh','Burleigh Heads','Your first sightseeing stop: open-ocean swimming plus Burleigh Headland scenery. Swim only between the red-and-yellow flags; if surf is rough, switch to a beach/headland walk.',['Swim between flags','Shower/change','Short headland walk','Skip swimming if surf is rough'],'A$0 · beach and walk are free','Keep the swim to roughly 45–60 minutes plus change time so the rest of the itinerary stays on schedule.','https://www.goldcoast.qld.gov.au/Things-to-do/Beaches'],
+['charis','Charis Seafoods + Broadwater','Combine lunch with the pelican stop on the Broadwater. It feels much more sheltered than the open surf beaches.',['Start lunch ~12:35','Finish by ~13:20','Pelicans around 13:30','Short waterfront walk'],'About A$15–30 pp · Dory & Chips A$15.50, Fish & Calamari A$18.90, Prawns & Chips A$25.90','Fish & Calamari is a simple one-person pick; choose a larger basket if hungry. The pelican viewing itself does not require an attraction ticket.','https://charis-seafoods.menueat.net/menu'],
+['surfers','Surfers Paradise','Treat this as a compact city-beach stop before SkyPoint: walk Cavill Avenue, see the beachfront, then drift toward Q1.',['Cavill Avenue','Beach walk','One café/gelato stop','Walk toward Q1'],'A$0 sightseeing · allow about A$8–15 for a snack','You already swam at Burleigh, so keep Surfers for walking, photos and a quick snack. Long shopping stops can eat into sunset time.',''],
+['skypoint','SkyPoint','The key paid attraction: 360-degree views from Q1 over the coast and hinterland. With a fixed itinerary, the Fixed Date ticket makes more sense than Flexi.',['Enter around 16:20','Daylight panorama','Stay through sunset','Leave around 18:00'],'Fixed Date from A$33 · Flexi from A$51','Choose Fixed Date for this itinerary. Make time to look both south toward Burleigh and north toward Main Beach.','https://www.skypoint.com.au/tickets'],
+['rick','Rick Shores','A beachfront Pan-Asian dinner at Burleigh. Sharing several dishes works well, but keep the meal moving because the trip back to Brisbane is long.',['Book 19:00','Rick’s Bug Roll','Kingfish sashimi','Re-check R772 during dinner'],'Light-to-moderate meal about A$60–80 pp · Bug Roll A$26, Kingfish A$30 · set menus A$95/A$150 pp','For two: Bug Roll A$26 + Kingfish A$30 + Prawn Curry A$56 + Rice A$9 = about A$121 total, before drinks. Seasonal menu changes are possible.','https://www.rickshores.com.au/menu']],
 legs:[
 ['Central → Boggo Road','15–20 min','TRAIN','train','Brisbane Central Station','Southbound train · Boggo Road stop','Boggo Road station','Gold Coast line is disrupted; transfer to the railbus at Boggo Road.','central','boggo'],
 ['Boggo Road → Helensvale','~85 min + wait','R772','railbus','Boggo Road busway station','R772 Rail Replacement Bus · Helensvale','Helensvale station','Critical transfer. Follow temporary R772 signs and staff directions.','boggo','helensvale'],
@@ -98,32 +98,32 @@ zh:{
 title:'黃金海岸一日旅行指南',eyebrow:'一日遊 · 游泳 + 午餐 + 景觀 + 晚餐',intro:'把 OpenStreetMap、即時 GPS、上下車資訊與景點安排整合在同一個手機頁面。',s1:'建議離開 Central',s2:'抵達 Burleigh',s3:'Rick Shores',
 alert:'10 月 4 日 Gold Coast/Beenleigh 線施工，Varsity Lakes ↔ Boggo Road 改搭接駁巴士。基本路線：Central → Boggo Road → R772 → Helensvale → L1。',alertLink:'施工資訊',preview:'行程預覽',today:'現在要做什麼',ended:'行程結束',ready:'準備',done:'完成',minutes:' 分',next:'下一站',gpsHint:'開啟 GPS 後，現在位置與到下一站的距離會持續更新。',gpsOn:'開啟定位',google:'Google 導航',translink:'Translink',focusNext:'下一站',
 mapTitle:'即時地圖',mapTiny:'OpenStreetMap · 即時 GPS',wholeRoute:'完整路線',gpsOff:'GPS 關閉',gpsSecure:'請在 HTTPS 頁面允許定位權限。',track:'追蹤位置',followOn:'跟隨 ON',followOff:'跟隨 OFF',transport:'交通',tourism:'觀光',myLoc:'我的位置',whereLabel:'目前位置',speed:'移動速度',near:'附近',from:'距離',arrival:'已到達附近',toNext:'距下一站',
-schedule:'較實際的行程表',schedTiny:'藍色＝交通 · 橘色＝觀光',places:'每個景點要做什麼',placesTiny:'橘色卡片＝觀光',transportDetail:'上下車與轉乘詳情',transportTiny:'藍色卡片＝交通',takeAt:'上車地點',takeWhat:'搭乘',getOff:'下車地點',dayLinks:'當日確認連結',dayTiny:'出發前再確認',map:'地圖',scheduleNav:'行程',placesNav:'景點',transportNav:'交通',nowNav:'現在',
+schedule:'較實際的行程表',schedTiny:'藍色＝交通 · 橘色＝觀光',placesLabel:'每個景點要做什麼',placesTiny:'橘色卡片＝觀光',recommend:'建議',cost:'預估費用',priceCheck:'查看價格 / 菜單',fareText:'Translink 每一趟 journey 為 A$0.50。請使用同一張卡或裝置上下車感應；符合規則的一小時內轉乘可合併為同一趟 journey。',fareLink:'50¢ 車資說明',transportDetail:'上下車與轉乘詳情',transportTiny:'藍色卡片＝交通',takeAt:'上車地點',takeWhat:'搭乘',getOff:'下車地點',dayLinks:'當日確認連結',dayTiny:'出發前再確認',map:'地圖',scheduleNav:'行程',placesNav:'景點',transportNav:'交通',nowNav:'現在',
 footer:'地圖路線僅表示行程順序，不是逐轉彎導航。實際發車時間、月台與臨時變更以 Translink 與現場公告為準。GPS 在頁面保持開啟時最穩定。',dirs:['北','東北','東','東南','南','西南','西','西北'],gpsChecking:'正在取得目前位置…',gpsUnavailable:'GPS 無法使用',gpsUnsupported:'此瀏覽器不支援定位功能。',gpsHttps:'GPS 在 HTTPS 上才能穩定運作。',
 schedules:[
 ['06:45','07:05','Central → Boggo Road','TRAIN','train','搭南向列車，確認有停 Boggo Road。','boggo','transport'],
 ['07:05','07:30','準備搭 R772','TRANSFER','railbus','在 Boggo Road busway 找 R772 接駁巴士標示，保留等待時間。','boggo','transport'],
 ['07:30','08:58','R772 → Helensvale','R772','railbus','鐵路接駁巴士，施工日預留約 85 分鐘。','helensvale','transport'],
 ['09:00','10:05','L1 → Burleigh Heads','L1','tram','從 Helensvale 搭 G:link L1 直達 Burleigh Heads。','burleigh','transport'],
-['10:05','11:20','Burleigh Beach 游泳','SWIM','fun','只在紅黃旗之間游泳，包含沖洗與換衣時間。','burleigh','tour'],
+['10:05','11:20','Burleigh Beach 游泳','SWIM','fun','只在紅黃旗之間游泳約 45–60 分鐘。海灘免費；若浪大就改成 Headland 散步。','burleigh','tour'],
 ['11:25','12:10','L1 → Southport','L1','tram','搭往 Helensvale 方向的 L1，在 Southport 下車。','southport','transport'],
 ['12:10','12:35','704 → Labrador','704','bus','Southport 搭 704 往 Helensvale，在 Charis 附近下車。','charis','transport'],
-['12:35','13:20','Charis Seafoods 午餐','LUNCH','fun','快速吃魚薯條，13:20 左右移動到水邊。','charis','tour'],
-['13:30','13:45','Pelican Feeding','PELICAN','fun','Charis 前方 Broadwater 水岸，當天再確認開始時間。','charis','tour'],
+['12:35','13:20','Charis Seafoods 午餐','LUNCH','fun','推薦 Fish & Calamari A$18.90 或 Dory & Chips A$15.50，13:20 左右吃完。','charis','tour'],
+['13:30','13:45','Pelican Feeding','PELICAN','fun','Charis 前方 Broadwater 水岸，不需另外買景點門票；當天再確認約 13:30 是否準時開始。','charis','tour'],
 ['13:50','14:35','704 + L1 → Surfers','704+L1','bus','704 往 Sea World → Southport → L1 南向。','surfers','transport'],
-['14:35','16:15','Surfers Paradise 自由時間','WALK','fun','海灘散步、Cavill Avenue、咖啡與逛街。','surfers','tour'],
-['16:20','18:00','SkyPoint','VIEW','fun','從白天景色一路看到夕陽與傍晚。','skypoint','tour'],
+['14:35','16:15','Surfers Paradise 自由時間','WALK','fun','海灘 + Cavill Avenue 約 60–90 分鐘。觀光免費，咖啡或 gelato 預算抓 A$8–15 即可。','surfers','tour'],
+['16:20','18:00','SkyPoint','VIEW','fun','Fixed Date 門票 A$33 起。約 16:20 上去，從白天看到夕陽與傍晚，18:00 左右離開。','skypoint','tour'],
 ['18:05','18:55','L1 → Burleigh + 步行','L1','tram','Surfers 搭 L1 往 Burleigh Heads，再步行到 Rick Shores。','rick','transport'],
-['19:00','20:15','Rick Shores 晚餐','DINNER','fun','海邊晚餐，建議 20:15 左右結束。','rick','tour'],
+['19:00','20:15','Rick Shores 晚餐','DINNER','fun','推薦 A$26 Bug Roll + A$30 Kingfish。兩人分食約 A$60–80/人（未含飲料），20:15 左右結束。','rick','tour'],
 ['20:20','21:30','L1 → Helensvale','L1','tram','Burleigh Heads 搭 L1 往 Helensvale。','helensvale','transport'],
 ['21:30','23:10','R772 + 轉乘緩衝','R772','railbus','Helensvale 搭 R772 往 Boggo Road，晚間班次當天再確認。','boggo','transport'],
 ['23:10','23:45','Boggo Road → Central','TRAIN','train','依轉乘銜接，預計 23:15–23:45 抵達 Central。','central','transport']],
 places:[
-['burleigh','Burleigh Heads','很適合一次體驗黃金海岸的海泳與岬角景色。仍要依當天浪況與離岸流決定是否下水。',['紅黃旗間游泳','沖洗換衣','岬角短程散步','海灘拍照']],
-['charis','Charis Seafoods + Broadwater','在 Labrador 的 Broadwater 水岸吃魚薯條，再看鵜鶘餵食。這裡比外海衝浪海灘感覺平靜。',['12:35 午餐','魚薯條','約 13:30 鵜鶘餵食','水岸散步']],
-['surfers','Surfers Paradise','黃金海岸最具代表性的觀光中心。這段以海灘、Cavill Avenue、咖啡與簡單購物為主。',['海灘散步','Cavill Avenue','咖啡/逛街','Q1 拍照']],
-['skypoint','SkyPoint','位於 Q1 高樓層的觀景台，可同時看海岸線與內陸。安排白天、夕陽到入夜的景色。',['16:20 進場','海岸全景','夕陽','18:00 左右離開']],
-['rick','Rick Shores','在 Burleigh 海邊用晚餐收尾，吃完直接銜接返回 Brisbane 的長程交通。',['建議 19:00 訂位','海景座位','約 20:15 結束','再次確認 R772']]],
+['burleigh','Burleigh Heads','第一個觀光點，可同時體驗外海游泳與 Burleigh Headland 景色。只在紅黃旗之間下水；若浪大或離岸流明顯，就改成海灘與岬角散步。',['紅黃旗間游泳','沖洗換衣','岬角短程散步','浪大就取消游泳'],'A$0 · 海灘與散步免費','游泳約 45–60 分鐘，再留 15 分鐘沖洗換衣，較不會拖到後續行程。','https://www.goldcoast.qld.gov.au/Things-to-do/Beaches'],
+['charis','Charis Seafoods + Broadwater','把午餐與鵜鶘觀賞安排在同一站。Broadwater 比外海衝浪海灘更有遮蔽、氣氛也比較平靜。',['約 12:35 開始午餐','13:20 左右吃完','約 13:30 看鵜鶘','短程水岸散步'],'約 A$15–30/人 · Dory & Chips A$15.50、Fish & Calamari A$18.90、Prawns & Chips A$25.90','一人用餐可選 Fish & Calamari；比較餓可選較大的 seafood basket。鵜鶘觀賞本身不需要景點門票。','https://charis-seafoods.menueat.net/menu'],
+['surfers','Surfers Paradise','把這裡當成 SkyPoint 前的短版市區海灘行程：Cavill Avenue、海灘，再一路往 Q1 方向走。',['Cavill Avenue','海灘散步','咖啡或 gelato','往 Q1 方向移動'],'觀光 A$0 · 點心預算約 A$8–15','Burleigh 已經游過泳，所以這裡以散步、拍照和簡單點心為主，避免逛街太久錯過夕陽。',''],
+['skypoint','SkyPoint','這天最主要的付費景點。Q1 Observation Deck 可 360 度看海岸線與內陸；行程時間固定，因此 Fixed Date 比 Flexi 更划算。',['約 16:20 進場','白天景色','看到夕陽','約 18:00 離開'],'Fixed Date A$33 起 · Flexi A$51 起','這份行程建議買 Fixed Date；記得同時看南邊 Burleigh 與北邊 Main Beach 方向。','https://www.skypoint.com.au/tickets'],
+['rick','Rick Shores','Burleigh 海邊的 Pan-Asian 晚餐。適合幾道菜一起分食，但回 Brisbane 路程很長，建議 20:15 左右結束。',['建議 19:00 訂位','Rick’s Bug Roll','Kingfish sashimi','吃飯時再確認 R772'],'較輕鬆吃約 A$60–80/人 · Bug Roll A$26、Kingfish A$30 · set menu A$95/A$150/人','兩人可點 Bug Roll A$26 + Kingfish A$30 + Prawn Curry A$56 + Rice A$9，合計約 A$121，未含飲料。菜單可能依季節調整。','https://www.rickshores.com.au/menu']],
 legs:[
 ['Central → Boggo Road','15–20 分','TRAIN','train','Brisbane Central Station','南向列車 · Boggo Road 下車','Boggo Road station','Gold Coast 線施工，需在 Boggo Road 轉乘接駁巴士。','central','boggo'],
 ['Boggo Road → Helensvale','約 85 分 + 等候','R772','railbus','Boggo Road busway station','R772 鐵路接駁巴士 · Helensvale 方向','Helensvale station','最重要的轉乘。臨時上車點以 R772 標示與工作人員指示為準。','boggo','helensvale'],
@@ -152,7 +152,7 @@ function localPlaceName(id){for(var i=0;i<d.places.length;i++)if(d.places[i][0]=
 function setStatic(){
 document.documentElement.lang=LANG==='zh'?'zh-TW':LANG;el('heroEyebrow').textContent=d.eyebrow;el('heroTitle').textContent=d.title;el('heroIntro').textContent=d.intro;el('stat1').textContent=d.s1;el('stat2').textContent=d.s2;el('stat3').textContent=d.s3;el('alertText').textContent=d.alert;el('alertLink').textContent=d.alertLink;
 el('gpsOnBtn').innerHTML='📍 '+d.gpsOn;el('gBtn').textContent='🧭 '+d.google;el('tBtn').textContent='🚌 '+d.translink;el('nextBtn').textContent='🗺 '+d.focusNext;el('mapTitle').textContent=d.mapTitle;el('mapTiny').textContent=d.mapTiny;el('mapStatus').textContent=d.wholeRoute;el('gpsMain').textContent=d.gpsOff;el('gpsSub').textContent=d.gpsSecure;el('trackBtn').textContent=d.track;el('followBtn').textContent=d.followOn;
-el('scheduleTitle').textContent=d.schedule;el('scheduleTiny').textContent=d.schedTiny;el('placesTitle').textContent=d.places;el('placesTiny').textContent=d.placesTiny;el('legsTitle').textContent=d.transportDetail;el('legsTiny').textContent=d.transportTiny;el('linksTitle').textContent=d.dayLinks;el('linksTiny').textContent=d.dayTiny;el('legendTransport').textContent=d.transport;el('legendTour').textContent=d.tourism;el('legendGps').textContent=d.myLoc;el('legendTransport2').textContent=d.transport;el('legendTour2').textContent=d.tourism;el('navNow').textContent=d.nowNav;el('navMap').textContent=d.map;el('navSchedule').textContent=d.scheduleNav;el('navPlaces').textContent=d.placesNav;el('navTransit').textContent=d.transportNav;el('footer').textContent=d.footer;el('distanceText').textContent=d.gpsHint;
+el('scheduleTitle').textContent=d.schedule;el('scheduleTiny').textContent=d.schedTiny;el('placesTitle').textContent=d.placesLabel;el('placesTiny').textContent=d.placesTiny;el('fareText').textContent=d.fareText;el('fareLink').textContent=d.fareLink;el('legsTitle').textContent=d.transportDetail;el('legsTiny').textContent=d.transportTiny;el('linksTitle').textContent=d.dayLinks;el('linksTiny').textContent=d.dayTiny;el('legendTransport').textContent=d.transport;el('legendTour').textContent=d.tourism;el('legendGps').textContent=d.myLoc;el('legendTransport2').textContent=d.transport;el('legendTour2').textContent=d.tourism;el('navNow').textContent=d.nowNav;el('navMap').textContent=d.map;el('navSchedule').textContent=d.scheduleNav;el('navPlaces').textContent=d.placesNav;el('navTransit').textContent=d.transportNav;el('footer').textContent=d.footer;el('distanceText').textContent=d.gpsHint;
 }
 function initMap(){
 if(!window.L){el('mapFail').style.display='flex';return}
@@ -169,7 +169,15 @@ window.locateMe=function(){if(!user){window.startGPS();return}if(map)map.setView
 window.toggleFollow=function(){follow=!follow;el('followBtn').textContent=follow?d.followOn:d.followOff;if(follow&&user&&map)map.setView([user.lat,user.lng],15)};
 function highlight(){if(!map)return;var n=S[active][6];Object.keys(markers).forEach(function(id){markers[id].setIcon(icon(P[id],id===n))})}
 function renderSchedule(){el('scheduleList').innerHTML=S.map(function(x){return'<div class="sched '+(x[7]==='tour'?'tourItem':'')+'"><div class="stime">'+x[0]+'<small>~ '+x[1]+'</small></div><div class="sbody"><div class="shead"><div class="stitle">'+x[2]+'</div><span class="badge '+x[4]+'">'+x[3]+'</span></div><div class="sdesc">'+x[5]+'</div></div></div>'}).join('')}
-function renderPlaces(){el('placeList').innerHTML=d.places.map(function(x){return'<div class="place"><div class="placeTop"><div class="placeIcon">'+P[x[0]].ic+'</div><div><h3>'+x[1]+'</h3><p>'+x[2]+'</p></div></div><div class="todo">'+x[3].map(function(t){return'<span>'+t+'</span>'}).join('')+'</div><div class="placeActions"><button onclick="focusPlace(\''+x[0]+'\');document.getElementById(\'mapsec\').scrollIntoView()">'+d.map+'</button><a class="g" href="'+gTo(x[0],x[0]==='burleigh'?'walking':'transit')+'" target="_blank">'+d.google+'</a></div></div>'}).join('')}
+function renderPlaces(){el('placeList').innerHTML=d.places.map(function(x){
+var price=x[4]||'',rec=x[5]||'',src=x[6]||'';
+return '<div class="place"><div class="placeTop"><div class="placeIcon">'+P[x[0]].ic+'</div><div><h3>'+x[1]+'</h3><p>'+x[2]+'</p></div></div>'+
+'<div class="todo">'+x[3].map(function(t){return'<span>'+t+'</span>'}).join('')+'</div>'+
+'<div class="placeInfo"><div><b>'+d.recommend+'</b><span>'+rec+'</span></div><div><b>'+d.cost+'</b><span>'+price+'</span></div></div>'+
+'<div class="placeActions"><button onclick="focusPlace(\''+x[0]+'\');document.getElementById(\'mapsec\').scrollIntoView()">'+d.map+'</button>'+
+'<a class="g" href="'+gTo(x[0],x[0]==='burleigh'?'walking':'transit')+'" target="_blank">'+d.google+'</a>'+
+(src?'<a class="priceLink" href="'+src+'" target="_blank">'+d.priceCheck+'</a>':'')+'</div></div>'
+}).join('')}
 function tLink(code){if(code.indexOf('R772')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/bus/t/r772';if(code.indexOf('704')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/bus/T/704';if(code.indexOf('L1')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/tram/t/l1';return'https://jp.translink.com.au/plan-your-journey/journey-planner'}
 function renderLegs(){el('legList').innerHTML=G.map(function(x,i){return'<div class="leg"><div class="legTop"><div class="legTitle">'+(i+1)+'. '+x[0]+' <span class="badge '+x[3]+'">'+x[2]+'</span></div><div class="dur">'+x[1]+'</div></div><div class="routeGrid"><b>'+d.takeAt+'</b><span>'+x[4]+'</span><b>'+d.takeWhat+'</b><span>'+x[5]+'</span><b>'+d.getOff+'</b><span>'+x[6]+'</span></div><div class="tip">'+x[7]+'</div><div class="links"><a class="g" href="'+gAB(x[8],x[9])+'" target="_blank">'+d.google+'</a><a class="t" href="'+tLink(x[2])+'" target="_blank">'+d.translink+'</a></div></div>'}).join('')}
 function nearestInfo(){if(!user)return null;var best=null;Object.keys(P).forEach(function(id){var p=P[id],k=hav(user.lat,user.lng,p.lat,p.lng);if(!best||k<best.k)best={id:id,k:k,p:p}});var br=bearing(best.p.lat,best.p.lng,user.lat,user.lng);return{id:best.id,k:best.k,p:best.p,dir:dirName(br)}}
