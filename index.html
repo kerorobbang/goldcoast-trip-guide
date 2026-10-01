@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#075f6b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Gold Coast Trip Guide · 2026-10-04</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<style>
+:root{--ink:#15343b;--muted:#71848a;--bg:#f4f7f8;--card:#fff;--line:#dce7e9;--sea:#087f8c;--sea2:#075f6b;--rail:#df7a00;--tram:#6b5bc3;--bus:#2e8a55;--train:#3167a5;--walk:#6c757d;--shadow:0 8px 24px rgba(12,58,67,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans KR",Arial,sans-serif;-webkit-tap-highlight-color:transparent}a{text-decoration:none;color:inherit}button{font:inherit}
+header{position:sticky;top:0;z-index:1000;background:rgba(7,95,107,.97);color:#fff;padding:calc(9px + env(safe-area-inset-top)) 12px 9px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+.head{max-width:760px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{font-weight:950;font-size:15px}.brand small,.clock small{display:block;font-size:9px;font-weight:700;opacity:.72;margin-top:2px}.clock{font-weight:950;font-size:16px;text-align:right;font-variant-numeric:tabular-nums}
+main{max-width:760px;margin:auto;padding:9px 9px calc(84px + env(safe-area-inset-bottom))}.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);margin:9px 0;overflow:hidden}.pad{padding:13px}.hero{background:linear-gradient(145deg,#075f6b,#07939f);color:#fff;border:0}.hero h1{font-size:20px;line-height:1.2;margin:4px 0 6px}.hero p{font-size:10px;line-height:1.5;margin:0;opacity:.86}.eyebrow{font-size:10px;font-weight:850;opacity:.78}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:11px}.stats div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:8px}.stats b{display:block;font-size:12px}.stats span{font-size:8px;opacity:.75}
+.alert{background:#fff7e6;border:1px solid #f2d18a;color:#705300;border-radius:13px;padding:9px 10px;font-size:9px;line-height:1.5}.alert b{color:#895b00}.alert a{text-decoration:underline;font-weight:850}
+.titleRow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:9px}.titleRow h2{font-size:15px;margin:0}.tiny{font-size:9px;color:var(--muted)}
+.now{border:2px solid #8fd5dc}.nowGrid{display:grid;grid-template-columns:1fr auto;gap:10px}.kicker{font-size:9px;color:var(--sea);font-weight:950}.nowTitle{font-size:18px;font-weight:950;line-height:1.22;margin-top:2px}.nowDesc{font-size:10px;color:var(--muted);line-height:1.45;margin-top:5px}.count{font-size:19px;font-weight:950;color:var(--sea);white-space:nowrap}.nextBox{background:#eefbfd;border-radius:11px;padding:9px 10px;font-size:10px;margin-top:9px}.btns{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:8px}.btn{border:0;border-radius:12px;min-height:43px;padding:9px 10px;background:#edf3f4;color:#294a52;font-weight:900;font-size:10px;display:flex;align-items:center;justify-content:center;gap:6px}.primary{background:var(--sea);color:#fff}.google{background:#eef4ff;color:#174f8c}.translink{background:#eef9f0;color:#246743}
+.mapWrap{position:relative}.map{height:min(52vh,480px);min-height:390px;background:#dce9eb}.mapFail{display:none;position:absolute;inset:0;z-index:600;background:#eaf1f2;align-items:center;justify-content:center;padding:30px;text-align:center;color:#4d676d;font-size:11px;line-height:1.6}.mapTools{position:absolute;z-index:500;top:9px;right:9px;display:flex;flex-direction:column;gap:6px}.mapTools button{width:42px;height:42px;border:1px solid rgba(0,0,0,.12);border-radius:12px;background:rgba(255,255,255,.96);box-shadow:0 4px 12px rgba(0,0,0,.12);font-weight:950;font-size:16px}.mapStatus{position:absolute;z-index:500;left:9px;top:9px;background:rgba(7,95,107,.94);color:#fff;border-radius:999px;padding:7px 10px;font-size:9px;font-weight:900;max-width:65%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.mapLegend{display:flex;gap:6px;overflow:auto;scrollbar-width:none;padding:8px 10px;border-top:1px solid var(--line)}.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 10px;font-size:9px;font-weight:900}.gpsline{display:flex;gap:8px;align-items:center;justify-content:space-between;padding:9px 11px;background:#f8fcfd;border-top:1px solid var(--line);font-size:9px}.gpsdot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#adb5bd;margin-right:5px}.gpsdot.on{background:#2f9e44;box-shadow:0 0 0 4px rgba(47,158,68,.13)}
+.schedule{display:flex;flex-direction:column;gap:7px}.sched{display:grid;grid-template-columns:54px 1fr;gap:8px}.stime{text-align:right;font-size:11px;font-weight:950;padding-top:9px}.stime small{display:block;font-size:8px;color:#8a9ca0}.sbody{border:1px solid var(--line);border-radius:13px;padding:9px 10px}.sched.active .sbody{border:2px solid #79cdd6;background:#f5fdff}.sched.done{opacity:.44}.shead{display:flex;justify-content:space-between;gap:7px}.stitle{font-size:11px;font-weight:950}.sdesc{font-size:9px;color:var(--muted);line-height:1.45;margin-top:3px}.badge{display:inline-block;color:#fff;border-radius:999px;padding:3px 6px;font-size:8px;font-weight:950;white-space:nowrap}.train{background:var(--train)}.railbus{background:var(--rail)}.tram{background:var(--tram)}.bus{background:var(--bus)}.walk{background:var(--walk)}.fun{background:var(--sea)}
+.leg{border:1px solid var(--line);border-radius:14px;padding:11px;margin:8px 0}.legTop{display:flex;justify-content:space-between;gap:8px}.legTitle{font-size:11px;font-weight:950}.dur{font-size:9px;color:var(--muted);white-space:nowrap}.routeGrid{display:grid;grid-template-columns:65px 1fr;gap:5px 7px;font-size:9px;margin-top:8px;line-height:1.45}.routeGrid b{color:#536d74}.tip{margin-top:8px;background:#fff8dc;border:1px solid #f4df91;border-radius:10px;padding:7px 8px;font-size:9px;line-height:1.45;color:#6a5500}.links{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}.links a{min-height:38px;border-radius:10px;background:#edf3f4;color:#294a52;font-size:9px;font-weight:900;display:flex;align-items:center;justify-content:center;padding:8px}.links .g{background:#eef4ff;color:#174f8c}.links .t{background:#eef9f0;color:#246743}
+footer{font-size:8px;line-height:1.55;color:#829399;padding:8px 4px 12px;text-align:center}.bottom{position:fixed;z-index:1200;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:5px 7px calc(5px + env(safe-area-inset-bottom))}.bottomIn{max-width:760px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}.nav{text-align:center;border:0;background:transparent;border-radius:10px;padding:5px 2px;color:#526d74;font-size:8px;font-weight:900}.nav b{display:block;font-size:15px;line-height:16px}.pin{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#fff;border:3px solid #087f8c;box-shadow:0 3px 10px rgba(0,0,0,.25);font-size:14px}.pin.next{border-color:#d9485f;transform:scale(1.12)}
+@media(min-width:600px){main{padding-left:14px;padding-right:14px}.hero h1{font-size:25px}.btns{grid-template-columns:repeat(4,1fr)}.map{height:480px}}
+</style>
+</head>
+<body>
+<header><div class="head"><div class="brand">Gold Coast Trip Guide<small>2026.10.04 · Brisbane ↔ Gold Coast</small></div><div id="clock" class="clock">--:--<small>Queensland</small></div></div></header>
+<main>
+<section class="card hero"><div class="pad"><div class="eyebrow">당일치기 · 수영 + 점심 + 전망 + 저녁</div><h1>Burleigh → Charis → Surfers → SkyPoint → Rick Shores</h1><p>실제 OpenStreetMap + GPS 현재 위치 + 승·하차 상세를 휴대폰 한 페이지에 모았습니다.</p><div class="stats"><div><b>06:45</b><span>Central 출발 권장</span></div><div><b>10:00 전후</b><span>Burleigh 도착</span></div><div><b>19:00</b><span>Rick Shores</span></div></div></div></section>
+<div class="alert"><b>10월 4일 핵심:</b> Gold Coast/Beenleigh선 공사로 Varsity Lakes ↔ Boggo Road 열차가 railbus로 대체됩니다. 기본 동선은 <b>Central → Boggo Road → R772 → Helensvale → L1</b>입니다. <a href="https://translink.com.au/updates/1075981" target="_blank">공사 안내 확인</a></div>
+
+<section class="card now" id="now"><div class="pad"><div class="nowGrid"><div><div id="nowKicker" class="kicker">여행 미리보기</div><div id="nowTitle" class="nowTitle">Central → Boggo Road</div><div id="nowDesc" class="nowDesc">Central에서 Boggo Road로 이동합니다.</div></div><div id="count" class="count">준비</div></div><div class="nextBox"><b id="nextText">다음 목적지: Boggo Road</b><div id="distanceText" style="margin-top:3px;color:#6f858b">GPS를 켜면 현재 위치 기준 거리도 표시됩니다.</div></div><div class="btns"><button class="btn primary" onclick="startGPS()">📍 내 위치 켜기</button><a id="nextGoogle" class="btn google" href="#" target="_blank">🧭 Google 길찾기</a><a class="btn translink" href="https://jp.translink.com.au/plan-your-journey/journey-planner" target="_blank">🚌 Translink</a><button class="btn" onclick="focusNext()">🗺 다음 목적지</button></div></div></section>
+
+<section class="card" id="mapsec"><div class="pad"><div class="titleRow"><h2>실제 지도</h2><span class="tiny">OpenStreetMap · GPS</span></div></div><div class="mapWrap"><div id="map" class="map"></div><div id="mapFail" class="mapFail">지도를 불러오지 못했습니다.<br>GitHub Pages의 https 주소에서 다시 열어주세요.</div><div id="mapStatus" class="mapStatus">전체 동선</div><div class="mapTools"><button onclick="fitAll()">◎</button><button onclick="focusNext()">➜</button><button onclick="locateMe()">●</button></div></div><div class="mapLegend"><button class="chip" onclick="focusPlace('central')">🚆 Central</button><button class="chip" onclick="focusPlace('helensvale')">🚋 Helensvale</button><button class="chip" onclick="focusPlace('burleigh')">🏊 Burleigh</button><button class="chip" onclick="focusPlace('charis')">🍤 Charis</button><button class="chip" onclick="focusPlace('surfers')">🏙 Surfers</button><button class="chip" onclick="focusPlace('rick')">🍽 Rick Shores</button></div><div class="gpsline"><div><span id="gpsDot" class="gpsdot"></span><b id="gpsMain">GPS 꺼짐</b><div id="gpsSub" style="color:#71848a;margin-top:2px">HTTPS에서 위치 권한을 허용하세요.</div></div><button class="btn" style="min-height:36px;width:auto" onclick="startGPS()">위치 추적</button></div></section>
+
+<section class="card" id="schedule"><div class="pad"><div class="titleRow"><h2>현실화한 일정표</h2><span class="tiny">환승·지연 여유 포함</span></div><div id="scheduleList" class="schedule"></div></div></section>
+<section class="card" id="legs"><div class="pad"><div class="titleRow"><h2>승·하차 상세</h2><span class="tiny">여행 중 이 부분만 보면 됨</span></div><div id="legList"></div></div></section>
+<section class="card"><div class="pad"><div class="titleRow"><h2>당일 체크 링크</h2><span class="tiny">출발 직전 확인</span></div><div class="routeGrid"><b>R772</b><span><a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/t/r772" target="_blank" style="text-decoration:underline;font-weight:850">Railbus 시간표</a></span><b>L1</b><span><a href="https://jp.translink.com.au/plan-your-journey/timetables/tram/t/l1" target="_blank" style="text-decoration:underline;font-weight:850">G:link L1</a></span><b>704</b><span><a href="https://jp.translink.com.au/plan-your-journey/timetables/bus/T/704" target="_blank" style="text-decoration:underline;font-weight:850">704 버스</a></span><b>공사</b><span><a href="https://translink.com.au/updates/1075981" target="_blank" style="text-decoration:underline;font-weight:850">10/3~5 운행 변경</a></span></div></div></section>
+<footer>지도 경로선은 여행 순서를 보여주는 안내선입니다. 실제 출발시각·플랫폼·운행변경은 Translink와 현장 안내가 우선입니다. OSM © OpenStreetMap contributors.</footer>
+</main>
+<nav class="bottom"><div class="bottomIn"><button class="nav" onclick="document.getElementById('now').scrollIntoView()"><b>⏱</b>지금</button><button class="nav" onclick="document.getElementById('mapsec').scrollIntoView()"><b>🗺</b>지도</button><button class="nav" onclick="document.getElementById('schedule').scrollIntoView()"><b>🗓</b>일정</button><button class="nav" onclick="document.getElementById('legs').scrollIntoView()"><b>🚋</b>교통</button></div></nav>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var TRIP='2026-10-04';
+var P={
+ central:{n:'Brisbane Central Station',lat:-27.46585,lng:153.02584,ic:'🚆'},
+ boggo:{n:'Boggo Road station',lat:-27.49389,lng:153.03028,ic:'🚌'},
+ helensvale:{n:'Helensvale station',lat:-27.92541,lng:153.33897,ic:'🚋'},
+ burleigh:{n:'Burleigh Heads Beach',lat:-28.09034,lng:153.45840,ic:'🏊'},
+ southport:{n:'Southport station',lat:-27.96767,lng:153.41373,ic:'🔁'},
+ charis:{n:'Charis Seafoods',lat:-27.94134,lng:153.40872,ic:'🍤'},
+ surfers:{n:'Surfers Paradise',lat:-28.00629,lng:153.42912,ic:'🏙️'},
+ skypoint:{n:'SkyPoint Observation Deck',lat:-28.00628,lng:153.42975,ic:'🌇'},
+ rick:{n:'Rick Shores',lat:-28.08945,lng:153.45473,ic:'🍽️'}
+};
+var S=[
+['06:45','07:05','Central → Boggo Road','TRAIN','train','Central에서 Boggo Road까지 남행 열차. 10월 4일은 현장 전광판에서 Boggo Road 정차를 확인.','boggo'],
+['07:05','07:30','R772 승차 준비','TRANSFER','railbus','Boggo Road busway에서 R772 표지 확인. 공사일 대기시간 포함.','boggo'],
+['07:30','08:58','R772 → Helensvale','R772','railbus','Rail Replacement Bus. 최근 공사 시간표 예시는 약 85분 수준.','helensvale'],
+['09:00','10:05','L1 → Burleigh Heads','L1','tram','Helensvale에서 Burleigh Heads 방향 G:link L1 직통.','burleigh'],
+['10:05','11:20','Burleigh Beach 수영','SWIM','fun','빨강·노랑 깃발 사이에서 수영. 샤워·환복 포함.','burleigh'],
+['11:25','12:10','L1 → Southport','L1','tram','Burleigh에서 Helensvale 방향 L1, Southport 하차.','southport'],
+['12:10','12:35','704 → Labrador','704','bus','Southport에서 704 Helensvale 방향. Charis 인근에서 하차.','charis'],
+['12:35','13:20','Charis Seafoods 점심','LUNCH','fun','13:20 전후 식사를 마무리.','charis'],
+['13:30','13:45','Pelican Feeding','PELICAN','fun','Charis 앞 수변. 현장 상황에 따라 시작 시각 변동 가능.','charis'],
+['13:50','14:35','704 + L1 → Surfers','704+L1','bus','704 Sea World 방향 → Southport → L1 Burleigh Heads 방향.','surfers'],
+['14:35','16:15','Surfers Paradise 자유시간','WALK','walk','해변·Cavill Avenue·카페.','surfers'],
+['16:20','18:00','SkyPoint','VIEW','fun','낮 풍경부터 일몰 전후까지.','skypoint'],
+['18:05','18:55','L1 → Burleigh + 도보','L1','tram','Surfers에서 Burleigh Heads 방향 L1 → Rick Shores 도보.','rick'],
+['19:00','20:15','Rick Shores 저녁','DINNER','fun','귀가 railbus를 고려해 20:15 전후 마무리 권장.','rick'],
+['20:20','21:30','L1 → Helensvale','L1','tram','Burleigh Heads에서 Helensvale 방향.','helensvale'],
+['21:30','23:10','R772 + 환승 대기','R772','railbus','Helensvale에서 Boggo Road 방향. 야간 시각은 당일 Translink 확인.','boggo'],
+['23:10','23:45','Boggo Road → Central','TRAIN','train','연결 열차에 따라 Central 도착은 약 23:15~23:45 예상.','central']
+];
+var G=[
+['Central → Boggo Road','15~20분','TRAIN','train','Brisbane Central Station','남행 열차 · Boggo Road 하차','Boggo Road station','10월 4일 Gold Coast선 직통열차는 운행하지 않습니다. Boggo Road 정차 열차를 전광판에서 확인.','central','boggo'],
+['Boggo Road → Helensvale','약 85분 + 대기','R772','railbus','Boggo Road busway station','R772 Rail Replacement Bus · Helensvale 방향','Helensvale station','가장 중요한 구간. 임시 승차 위치는 현장 R772 표지와 직원 안내 우선.','boggo','helensvale'],
+['Helensvale → Burleigh Heads','60~65분','L1','tram','Helensvale G:link','L1 · Burleigh Heads 방향','Burleigh Heads','직통. 종점에서 해변까지 도보.','helensvale','burleigh'],
+['Burleigh → Southport','40~45분','L1','tram','Burleigh Heads','L1 · Helensvale 방향','Southport station','Southport에서 704번 버스로 환승.','burleigh','southport'],
+['Southport → Charis','15~25분','704','bus','Southport 인근 704 정류장','704 · Helensvale 방향','Labrador / Charis 인근','Charis는 트램 노선에서 떨어져 있어 704 환승 필요.','southport','charis'],
+['Charis → Surfers','40~50분','704 + L1','bus','Labrador / Marine Pde','704 Sea World 방향 → Southport → L1 남행','Surfers Paradise','704를 타고 Southport로 돌아온 뒤 L1 Burleigh Heads 방향.','charis','surfers'],
+['SkyPoint → Rick Shores','45~50분','L1 + WALK','tram','Surfers Paradise','L1 · Burleigh Heads 방향','Burleigh Heads → Rick Shores 도보','18시 전후 바로 이동하면 19시 예약에 비교적 여유.','skypoint','rick'],
+['Rick Shores → Central','약 3시간+','L1 + R772 + TRAIN','railbus','Rick Shores → Burleigh Heads','L1 → R772 → Brisbane 열차','Brisbane Central','귀가가 가장 변동성이 큽니다. Helensvale 도착 전 R772를 다시 확인.','rick','central']
+];
+var map=null,markers={},routeLine=null,userMarker=null,accCircle=null,watchId=null,user=null,active=0;
+function mins(t){var a=t.split(':');return Number(a[0])*60+Number(a[1])}
+function nowB(){var d=new Date(),p=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Brisbane',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'}).formatToParts(d),o={};p.forEach(function(x){o[x.type]=x.value});return{date:o.year+'-'+o.month+'-'+o.day,h:Number(o.hour),m:Number(o.minute)}}
+function gTo(id,mode){var p=P[id],org=user?(user.lat+','+user.lng):'Current Location';return 'https://www.google.com/maps/dir/?api=1&origin='+encodeURIComponent(org)+'&destination='+p.lat+','+p.lng+'&travelmode='+(mode||'transit')}
+function gAB(a,b){return 'https://www.google.com/maps/dir/?api=1&origin='+P[a].lat+','+P[a].lng+'&destination='+P[b].lat+','+P[b].lng+'&travelmode=transit'}
+function hav(a,b,c,d){var R=6371,r=function(x){return x*Math.PI/180},da=r(c-a),db=r(d-b),q=Math.sin(da/2)*Math.sin(da/2)+Math.cos(r(a))*Math.cos(r(c))*Math.sin(db/2)*Math.sin(db/2);return 2*R*Math.asin(Math.sqrt(q))}
+function dist(k){return k<1?Math.round(k*1000)+' m':k.toFixed(1)+' km'}
+function icon(p,next){return L.divIcon({className:'',html:'<div class="pin '+(next?'next':'')+'">'+p.ic+'</div>',iconSize:[30,30],iconAnchor:[15,15],popupAnchor:[0,-16]})}
+function initMap(){
+ if(!window.L){document.getElementById('mapFail').style.display='flex';return}
+ map=L.map('map',{zoomControl:true,preferCanvas:true});
+ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+ Object.keys(P).forEach(function(id){var p=P[id];markers[id]=L.marker([p.lat,p.lng],{icon:icon(p,false)}).addTo(map).bindPopup('<b>'+p.n+'</b><br><a href="'+gTo(id)+'" target="_blank">Google 길찾기</a>')});
+ var ids=['central','boggo','helensvale','burleigh','southport','charis','southport','surfers','skypoint','rick','burleigh','helensvale','boggo','central'];
+ routeLine=L.polyline(ids.map(function(id){return[P[id].lat,P[id].lng]}),{color:'#087f8c',weight:5,opacity:.72,dashArray:'8 8'}).addTo(map);
+ fitAll();highlight();setTimeout(function(){map.invalidateSize()},300)
+}
+function fitAll(){if(!map)return;map.fitBounds(routeLine.getBounds(),{padding:[22,22]});document.getElementById('mapStatus').textContent='전체 동선'}
+function focusPlace(id){if(!map)return;var p=P[id];map.setView([p.lat,p.lng],14,{animate:true});markers[id].openPopup();document.getElementById('mapStatus').textContent=p.n}
+function focusNext(){document.getElementById('mapsec').scrollIntoView({behavior:'smooth',block:'start'});setTimeout(function(){focusPlace(S[active][6])},350)}
+function locateMe(){if(!user){startGPS();return}if(map)map.setView([user.lat,user.lng],15,{animate:true})}
+function highlight(){if(!map)return;var n=S[active][6];Object.keys(markers).forEach(function(id){markers[id].setIcon(icon(P[id],id===n))})}
+function renderSchedule(){document.getElementById('scheduleList').innerHTML=S.map(function(x){return'<div class="sched"><div class="stime">'+x[0]+'<small>~ '+x[1]+'</small></div><div class="sbody"><div class="shead"><div class="stitle">'+x[2]+'</div><span class="badge '+x[4]+'">'+x[3]+'</span></div><div class="sdesc">'+x[5]+'</div></div></div>'}).join('')}
+function tLink(code){if(code.indexOf('R772')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/bus/t/r772';if(code.indexOf('704')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/bus/T/704';if(code.indexOf('L1')>=0)return'https://jp.translink.com.au/plan-your-journey/timetables/tram/t/l1';return'https://jp.translink.com.au/plan-your-journey/journey-planner'}
+function renderLegs(){document.getElementById('legList').innerHTML=G.map(function(x,i){return'<div class="leg"><div class="legTop"><div class="legTitle">'+(i+1)+'. '+x[0]+' <span class="badge '+x[3]+'">'+x[2]+'</span></div><div class="dur">'+x[1]+'</div></div><div class="routeGrid"><b>타는 곳</b><span>'+x[4]+'</span><b>타는 것</b><span>'+x[5]+'</span><b>내리는 곳</b><span>'+x[6]+'</span></div><div class="tip">'+x[7]+'</div><div class="links"><a class="g" href="'+gAB(x[8],x[9])+'" target="_blank">Google 길찾기</a><a class="t" href="'+tLink(x[2])+'" target="_blank">Translink 확인</a></div></div>'}).join('')}
+function update(){
+ var n=nowB(),nm=n.h*60+n.m;document.getElementById('clock').innerHTML=String(n.h).padStart(2,'0')+':'+String(n.m).padStart(2,'0')+'<small>Queensland · '+n.date+'</small>';
+ if(n.date<TRIP){active=0;document.getElementById('nowKicker').textContent='여행 미리보기';document.getElementById('count').textContent='준비'}
+ else if(n.date>TRIP){active=S.length-1;document.getElementById('nowKicker').textContent='여행 종료';document.getElementById('count').textContent='완료'}
+ else{active=S.findIndex(function(x){return nm<mins(x[1])});if(active<0)active=S.length-1;var left=mins(S[active][1])-nm;document.getElementById('nowKicker').textContent='지금 해야 할 일';document.getElementById('count').textContent=left>0?left+'분':'진행'}
+ var x=S[active];document.getElementById('nowTitle').textContent=x[2];document.getElementById('nowDesc').textContent=x[5];document.getElementById('nextText').textContent='다음 목적지: '+P[x[6]].n;document.getElementById('nextGoogle').href=gTo(x[6],x[4]==='walk'?'walking':'transit');
+ document.querySelectorAll('.sched').forEach(function(e,i){e.classList.toggle('active',i===active);e.classList.toggle('done',i<active)});highlight();gpsInfo()
+}
+function gpsInfo(){if(!user)return;var d=P[S[active][6]],k=hav(user.lat,user.lng,d.lat,d.lng);document.getElementById('distanceText').textContent='현재 위치에서 '+d.n+'까지 직선거리 '+dist(k);document.getElementById('gpsMain').textContent='위치 추적 중 · ±'+Math.round(user.acc)+'m';document.getElementById('gpsSub').textContent='다음 목적지: '+d.n+' · '+dist(k);document.getElementById('nextGoogle').href=gTo(S[active][6])}
+function startGPS(){
+ if(!navigator.geolocation){fail('이 브라우저는 위치 기능을 지원하지 않습니다.');return}
+ if(!window.isSecureContext){fail('GPS는 HTTPS에서만 안정적으로 동작합니다.');return}
+ if(watchId!==null){locateMe();return}
+ document.getElementById('gpsMain').textContent='현재 위치 확인 중…';
+ watchId=navigator.geolocation.watchPosition(function(pos){
+  user={lat:pos.coords.latitude,lng:pos.coords.longitude,acc:pos.coords.accuracy};document.getElementById('gpsDot').classList.add('on');
+  if(map){if(!userMarker){userMarker=L.circleMarker([user.lat,user.lng],{radius:8,color:'#fff',weight:3,fillColor:'#2684ff',fillOpacity:1}).addTo(map).bindPopup('내 현재 위치');accCircle=L.circle([user.lat,user.lng],{radius:user.acc,color:'#2684ff',weight:1,fillColor:'#2684ff',fillOpacity:.08}).addTo(map)}else{userMarker.setLatLng([user.lat,user.lng]);accCircle.setLatLng([user.lat,user.lng]).setRadius(user.acc)}}
+  gpsInfo()
+ },function(e){fail(e.message)},{enableHighAccuracy:true,maximumAge:3000,timeout:15000})
+}
+function fail(msg){document.getElementById('gpsDot').classList.remove('on');document.getElementById('gpsMain').textContent='GPS 사용 불가';document.getElementById('gpsSub').textContent=msg}
+renderSchedule();renderLegs();initMap();update();setInterval(update,30000);
+</script>
+</body>
+</html>
